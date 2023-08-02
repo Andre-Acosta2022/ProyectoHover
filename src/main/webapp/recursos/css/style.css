@@ -1,0 +1,88 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 31 jul. 2023, 13:13:14
+    Author     : USUARIO
+*/
+
+body{
+    background: -moz-linear-gradient(-45deg, #84e8dc 0%, #f4ed8b 100%);
+    background: linear-gradient(135deg, #84e8dc 0%,#f4ed8b 100%);
+    font-family: sans-serif;
+}
+
+.container{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height: 90vh;
+
+
+}
+.imagen{
+    padding-left: 40px;
+}
+.container .imagen .nombre::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: 40%;
+    bottom: -20px;
+    border-top: 10px solid black;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+
+}
+.container img{
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    box-shadow: 5px 10px 40px 5px rgba(0,0,0,0.01);
+    transform: translate(-0.5%, -0.5%);
+    transition: all 0.9s ease-out;
+}
+.container img:hover{
+    backface-visibility: hidden;
+    transform: scale(1.15, 1.15);
+}
+.container .imagen:hover .nombre{
+    backface-visibility: hidden;
+    transform: scale(1.15, 1.15);
+    display: inline-block;
+}
+.container .imagen .nombre {
+    position: absolute;
+    background-color: black;
+    border-radius: 8px;
+    border-color: white;
+    color: white;
+    display: none;
+    min-width: 100px;
+    width: 150px;
+    top: 200px;
+    left: calc (-50%,30px);
+    padding: 6px 8px;
+    margin-left:-170px
+}
+.container .imagen .nombre .text{
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 150px;
+    text-align: center;
+    box-sizing: border-box;
+
+}
+@media (max-width:800){
+    body{
+        background: rgb(249,6,6);
+        background: linear-gradient(154deg, rgba(249,6,6,1) 11%, rgba(237,237,10,1) 37%, rgba(255,144,0,1) 76%, rgba(229,240,13,1) 100%);
+
+    }
+}
